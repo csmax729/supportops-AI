@@ -1,0 +1,12 @@
+[
+  {
+    "title": "[Synthetic] POST returns a validation error",
+    "description": "A FastAPI POST endpoint declares a Pydantic request body. What does FastAPI do with the JSON payload, and how can I check which field failed?",
+    "error": "HTTP 422",
+    "context": "Development environment. Production impact unknown."
+  },
+  {
+    "title": "[Synthetic] Unexpected path parsing",
+    "description": "My endpoint expects an integer path parameter. Sending a word in the URL produces a validation error."
+  }
+]

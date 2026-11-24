@@ -1,0 +1,44 @@
+[
+  {
+    "title": "[Synthetic] POST returns a validation error",
+    "provider": "llamacpp/qwen2.5-1.5b-instruct",
+    "sufficient": true,
+    "citations": 1,
+    "source_titles": [
+      "Request body"
+    ],
+    "reply": "Check if the Pydantic model is correctly defined for the request body.",
+    "findings": [
+      {
+        "text": "Check if the Pydantic model is correctly defined for the request body.",
+        "chunk_id": "98bc4ae1170d126f1ed5e7c29140384d7526ad5581e2aa8ad7ec1ba8f7e4bbf2-1",
+        "quote": "To declare a **request** body, you use [Pydantic](https://pydantic.dev/docs/) models with all their power and benefits."
+      }
+    ],
+    "review_decision": "APPROVED",
+    "quotes_verified": true,
+    "review_persisted": true,
+    "escalation_reason": "",
+    "latency_ms": 109718.82,
+    "usage": {
+      "completion_tokens": 105,
+      "prompt_tokens": 1276,
+      "total_tokens": 1381
+    }
+  },
+  {
+    "title": "[Synthetic] Gardening",
+    "provider": null,
+    "sufficient": false,
+    "citations": 0,
+    "source_titles": [],
+    "reply": "Please share a minimal redacted example so we can investigate.",
+    "findings": [],
+    "review_decision": "ESCALATED",
+    "quotes_verified": true,
+    "review_persisted": true,
+    "escalation_reason": "The nearest source fell below the relevance cutoff calibrated for this corpus.",
+    "latency_ms": 51.99,
+    "usage": {}
+  }
+]

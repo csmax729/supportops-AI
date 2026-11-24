@@ -1,0 +1,66 @@
+[
+  [
+    "How does FastAPI parse the request body into a Pydantic object?",
+    true
+  ],
+  [
+    "Can path parameters be converted to integers?",
+    true
+  ],
+  [
+    "How do I register an exception handler for HTTPException?",
+    true
+  ],
+  [
+    "Can I inject a reusable function with Depends?",
+    true
+  ],
+  [
+    "What validation error is returned for a malformed URL parameter?",
+    true
+  ],
+  [
+    "Where do maintainers announce FastAPI bug fixes?",
+    true
+  ],
+  [
+    "Is a nullable field required in a Pydantic request schema?",
+    true
+  ],
+  [
+    "Which framework documentation explains route declaration order?",
+    true
+  ],
+  [
+    "How many tablespoons of butter should I add to pastry dough?",
+    false
+  ],
+  [
+    "When should I water a houseplant?",
+    false
+  ],
+  [
+    "Suggest a name for a golden retriever puppy.",
+    false
+  ],
+  [
+    "Who won the marathon?",
+    false
+  ],
+  [
+    "What is the best telescope for viewing Saturn?",
+    false
+  ],
+  [
+    "Explain mortgage amortization.",
+    false
+  ],
+  [
+    "Which strings fit my acoustic guitar?",
+    false
+  ],
+  [
+    "Can I wear suede boots in the rain?",
+    false
+  ]
+]

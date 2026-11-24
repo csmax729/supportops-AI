@@ -1,0 +1,255 @@
+{
+  "status": "evaluated",
+  "created": "2026-11-22T16:38:51.303850+00:00",
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2@c9745ed1d9f207416be6d2e6f8de32d1f16199bf:normalized-v1",
+  "k": 3,
+  "cases": 8,
+  "errors": 0,
+  "corpus": {
+    "body": "98bc4ae1170d126f1ed5e7c29140384d7526ad5581e2aa8ad7ec1ba8f7e4bbf2",
+    "dependencies": "259d91dbefa30d0e329f8aac8a10a5b0d9d0e2f38083cecbf3550f99c3783f09",
+    "errors": "860d445dd1002541fcfb571122550ef68705cd54228189f3418789f932c1842c",
+    "paths": "d99f76f16b432bf895172f1184466a4c818d294f99311d77f924549c10607673",
+    "releases": "13dba1261bb5067485767302db9f41a609f3b6e7dfb63dcdb8f48c0077cb70f6"
+  },
+  "summary": {
+    "dense": {
+      "recall": 1.0,
+      "precision": 0.3333333333333333,
+      "rr": 1.0
+    },
+    "diverse": {
+      "recall": 1.0,
+      "precision": 0.3333333333333333,
+      "rr": 1.0
+    }
+  },
+  "latency_p50_ms": 22.035,
+  "latency_p95_ms": null,
+  "rows": [
+    {
+      "query": "A POST endpoint takes a BaseModel. Which parts of the incoming JSON are required?",
+      "expected": [
+        "body"
+      ],
+      "retrieved": [
+        "body",
+        "body",
+        "body",
+        "body",
+        "paths",
+        "errors",
+        "body",
+        "errors",
+        "body"
+      ],
+      "dense": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "diverse": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "ms": 35.22
+    },
+    {
+      "query": "What does the framework do with a URL segment annotated as an integer?",
+      "expected": [
+        "paths"
+      ],
+      "retrieved": [
+        "paths",
+        "paths",
+        "paths",
+        "paths",
+        "paths",
+        "dependencies",
+        "paths",
+        "paths",
+        "paths"
+      ],
+      "dense": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "diverse": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "ms": 23.12
+    },
+    {
+      "query": "How do I raise an HTTPException with detail for a missing item?",
+      "expected": [
+        "errors"
+      ],
+      "retrieved": [
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors"
+      ],
+      "dense": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "diverse": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "ms": 20.84
+    },
+    {
+      "query": "Where can I reuse a shared dependency across path operations with Depends?",
+      "expected": [
+        "dependencies"
+      ],
+      "retrieved": [
+        "dependencies",
+        "dependencies",
+        "dependencies",
+        "dependencies",
+        "dependencies",
+        "dependencies",
+        "dependencies",
+        "dependencies",
+        "dependencies"
+      ],
+      "dense": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "diverse": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "ms": 19.22
+    },
+    {
+      "query": "Where are the recent FastAPI changes and fixes recorded?",
+      "expected": [
+        "releases"
+      ],
+      "retrieved": [
+        "releases",
+        "releases",
+        "releases",
+        "releases",
+        "releases",
+        "releases",
+        "releases",
+        "releases",
+        "dependencies"
+      ],
+      "dense": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "diverse": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "ms": 23.4
+    },
+    {
+      "query": "Which schema checks apply to a field sent in a JSON request body?",
+      "expected": [
+        "body"
+      ],
+      "retrieved": [
+        "body",
+        "body",
+        "errors",
+        "errors",
+        "body",
+        "body",
+        "errors",
+        "body",
+        "errors"
+      ],
+      "dense": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "diverse": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "ms": 22.39
+    },
+    {
+      "query": "Why does route declaration order affect fixed and parameterized paths?",
+      "expected": [
+        "paths"
+      ],
+      "retrieved": [
+        "paths",
+        "paths",
+        "paths",
+        "paths",
+        "dependencies",
+        "paths",
+        "paths",
+        "dependencies",
+        "paths"
+      ],
+      "dense": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "diverse": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "ms": 19.16
+    },
+    {
+      "query": "How can an exception handler change the response to invalid request data?",
+      "expected": [
+        "errors"
+      ],
+      "retrieved": [
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors",
+        "errors"
+      ],
+      "dense": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "diverse": {
+        "recall": 1.0,
+        "precision": 0.3333333333333333,
+        "rr": 1.0
+      },
+      "ms": 21.68
+    }
+  ]
+}

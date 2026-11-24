@@ -1,0 +1,26 @@
+name: SupportOps checks
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync --frozen --python 3.11
+      - run: uv run ruff check backend scripts tests frontend
+      - run: uv run pytest -q
+  containers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start API and UI with an empty data volume
+        run: |
+          cp .env.example .env
+          docker compose config --quiet
+          docker compose up --build --wait --wait-timeout 180
+      - name: Check storage readiness and UI health
+        run: |
+          curl --fail --retry 5 --retry-connrefused http://localhost:8000/ready
+          curl --fail --retry 5 --retry-connrefused http://localhost:8501/_stcore/health
+      - if: always()
+        run: docker compose down

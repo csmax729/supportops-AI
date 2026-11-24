@@ -1,0 +1,50 @@
+[
+  [
+    "A POST endpoint takes a BaseModel. Which parts of the incoming JSON are required?",
+    [
+      "body"
+    ]
+  ],
+  [
+    "What does the framework do with a URL segment annotated as an integer?",
+    [
+      "paths"
+    ]
+  ],
+  [
+    "How do I raise an HTTPException with detail for a missing item?",
+    [
+      "errors"
+    ]
+  ],
+  [
+    "Where can I reuse a shared dependency across path operations with Depends?",
+    [
+      "dependencies"
+    ]
+  ],
+  [
+    "Where are the recent FastAPI changes and fixes recorded?",
+    [
+      "releases"
+    ]
+  ],
+  [
+    "Which schema checks apply to a field sent in a JSON request body?",
+    [
+      "body"
+    ]
+  ],
+  [
+    "Why does route declaration order affect fixed and parameterized paths?",
+    [
+      "paths"
+    ]
+  ],
+  [
+    "How can an exception handler change the response to invalid request data?",
+    [
+      "errors"
+    ]
+  ]
+]

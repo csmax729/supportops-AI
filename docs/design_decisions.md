@@ -1,0 +1,10 @@
+# Design decisions
+
+The compact llama.cpp adapter ranks short prose passages within the retrieved evidence, asks the model to select one by ID, and maps the ID back to the stored quote. A second constrained model call checks whether the action follows from the evidence. The review can still miss a contradiction or an incorrect diagnostic step, as shown in [the generation evaluation](evaluation.md).
+
+- The Python standard library SQLite driver provides explicit transactions, foreign keys and WAL. The small fixed schema benefits from visible compare-and-set updates. Independent API workers and schema migrations would warrant a different persistence design.
+- Chroma’s native collection API accepts precomputed normalized vectors and metadata filters. LangChain Core composes a two-role prompt. These narrow integration points make failures reproducible and keep indexing independent of the chat provider.
+- Body text is section-scoped and chunked by words with overlap. Whitespace and code indentation inside each span survive. Large code blocks may cross chunk boundaries. The default of 130 words reflects MiniLM’s shorter input window. Tokenizer-aware boundaries are a follow-up experiment.
+- Relative source aliases simplify model output. The backend resolves them to persistent chunk IDs, verifies exact quotes and obtains URLs from stored evidence. A human checks whether the evidence logically supports the proposed action.
+- The model assesses relevance, conflicts and version applicability. There is no calibrated universal similarity cutoff. No indexed evidence, invalid citations and issue-only findings cause abstention. An engineer-confirmed production outage sets high priority. Other reports default to normal pending review.
+- API groups live together in backend/main.py, model contracts in backend/contracts.py, and the five UI views in frontend/app.py. The small modules replace the proposed one-file-per-route and one-file-per-page layout. The uv lock captures exact transitive versions. CI uses mock inference with an actual persistent Chroma store.

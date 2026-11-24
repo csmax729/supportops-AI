@@ -1,0 +1,10 @@
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements-ui.txt .
+RUN pip install --no-cache-dir -r requirements-ui.txt
+COPY frontend frontend
+COPY .streamlit .streamlit
+RUN useradd --create-home desk
+USER desk
+EXPOSE 8501
+CMD ["streamlit","run","frontend/app.py","--server.address=0.0.0.0","--server.headless=true"]

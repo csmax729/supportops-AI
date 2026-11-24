@@ -1,0 +1,15 @@
+FROM ghcr.io/astral-sh/uv:0.13.6 AS uv
+FROM python:3.11-slim
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 && rm -rf /var/lib/apt/lists/*
+COPY --from=uv /uv /usr/local/bin/uv
+WORKDIR /app
+ENV UV_LINK_MODE=copy PATH="/app/.venv/bin:$PATH" OMP_NUM_THREADS=4 HF_HOME=/app/runtime/hf
+COPY pyproject.toml uv.lock ./
+RUN uv sync --frozen --no-dev --no-install-project
+COPY backend backend
+COPY data data
+COPY scripts scripts
+RUN useradd --create-home desk && mkdir -p runtime && chown desk runtime
+USER desk
+EXPOSE 8000
+CMD ["uvicorn","backend.main:create_app","--factory","--host","0.0.0.0","--port","8000"]

@@ -1,0 +1,94 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2@c9745ed1d9f207416be6d2e6f8de32d1f16199bf:normalized-v1",
+  "revisions": {
+    "body": "98bc4ae1170d126f1ed5e7c29140384d7526ad5581e2aa8ad7ec1ba8f7e4bbf2",
+    "dependencies": "259d91dbefa30d0e329f8aac8a10a5b0d9d0e2f38083cecbf3550f99c3783f09",
+    "errors": "860d445dd1002541fcfb571122550ef68705cd54228189f3418789f932c1842c",
+    "paths": "d99f76f16b432bf895172f1184466a4c818d294f99311d77f924549c10607673",
+    "releases": "13dba1261bb5067485767302db9f41a609f3b6e7dfb63dcdb8f48c0077cb70f6"
+  },
+  "threshold": 0.2781810760498047,
+  "correct_development_labels": 16,
+  "rows": [
+    {
+      "query": "How does FastAPI parse the request body into a Pydantic object?",
+      "relevant": true,
+      "score": 0.7229747176170349
+    },
+    {
+      "query": "Can path parameters be converted to integers?",
+      "relevant": true,
+      "score": 0.6770930290222168
+    },
+    {
+      "query": "How do I register an exception handler for HTTPException?",
+      "relevant": true,
+      "score": 0.6841222047805786
+    },
+    {
+      "query": "Can I inject a reusable function with Depends?",
+      "relevant": true,
+      "score": 0.3865532875061035
+    },
+    {
+      "query": "What validation error is returned for a malformed URL parameter?",
+      "relevant": true,
+      "score": 0.4996808171272278
+    },
+    {
+      "query": "Where do maintainers announce FastAPI bug fixes?",
+      "relevant": true,
+      "score": 0.48608124256134033
+    },
+    {
+      "query": "Is a nullable field required in a Pydantic request schema?",
+      "relevant": true,
+      "score": 0.6056981682777405
+    },
+    {
+      "query": "Which framework documentation explains route declaration order?",
+      "relevant": true,
+      "score": 0.39108896255493164
+    },
+    {
+      "query": "How many tablespoons of butter should I add to pastry dough?",
+      "relevant": false,
+      "score": 0.09713608026504517
+    },
+    {
+      "query": "When should I water a houseplant?",
+      "relevant": false,
+      "score": 0.0910683274269104
+    },
+    {
+      "query": "Suggest a name for a golden retriever puppy.",
+      "relevant": false,
+      "score": 0.14781582355499268
+    },
+    {
+      "query": "Who won the marathon?",
+      "relevant": false,
+      "score": 0.1341761350631714
+    },
+    {
+      "query": "What is the best telescope for viewing Saturn?",
+      "relevant": false,
+      "score": 0.16980886459350586
+    },
+    {
+      "query": "Explain mortgage amortization.",
+      "relevant": false,
+      "score": 0.0972144603729248
+    },
+    {
+      "query": "Which strings fit my acoustic guitar?",
+      "relevant": false,
+      "score": 0.14631760120391846
+    },
+    {
+      "query": "Can I wear suede boots in the rain?",
+      "relevant": false,
+      "score": 0.08288520574569702
+    }
+  ]
+}
