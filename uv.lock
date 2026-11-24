@@ -2423,6 +2423,10 @@ dev = [
     { name = "pytest" },
     { name = "ruff" },
 ]
+ui = [
+    { name = "httpx" },
+    { name = "streamlit" },
+]
 
 [package.metadata]
 requires-dist = [
@@ -2446,6 +2450,10 @@ requires-dist = [
 dev = [
     { name = "pytest", specifier = ">=8,<10" },
     { name = "ruff", specifier = ">=0.12,<1" },
+]
+ui = [
+    { name = "httpx" },
+    { name = "streamlit" },
 ]
 
 [[package]]

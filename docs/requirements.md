@@ -15,7 +15,7 @@ The primary user is a technical support engineer investigating a SaaS API ticket
 | Evaluation | Separate reference labels and synthetic behavioral cases, per-query rankings, latency, citation membership and reviewer feedback | Actual retrieval comparison and live-provider checks; independent human quality judgments pending |
 | Advanced retrieval | Compare document-diverse selection against dense ranking | Tied on all eight labeled queries. Dense remains the default |
 | Reliability | Single-writer index publication, model identity checks, request limits, bounded retries, safe errors and interrupted-work recovery | Offline suite includes failed updates, incompatible encoders, request size, timeout, missing credentials, injection containment and rollback |
-| Deployment | Separate API and UI images, locked dependencies, shared persistent API volume, service DNS and loopback ports | Dockerfile paths and Compose configuration inspected. Runtime container build and startup unverified because Docker was unavailable |
+| Deployment | Separate API and UI images, locked dependencies, persistent API volume, service DNS and loopback ports | Built both Linux images on Windows Docker Desktop. Compose started both services. The API reported storage ready on a new empty volume and Streamlit returned a healthy response. |
 | Documentation | Reproducible setup, diagrams, API examples, demo script, limitations and source policy | Release ZIP checked for broken local Markdown links and unexpected generated files |
 
 ## Scope and remaining work

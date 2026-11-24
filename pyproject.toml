@@ -9,6 +9,7 @@ dependencies = [
  "streamlit>=1.45,<2", "pypdf>=6,<7", "transformers>=4.48,<5", "torch>=2.5,<3"
 ]
 [dependency-groups]
+ui = ["streamlit", "httpx"]
 dev = ["pytest>=8,<10","ruff>=0.12,<1"]
 
 [[tool.uv.index]]
